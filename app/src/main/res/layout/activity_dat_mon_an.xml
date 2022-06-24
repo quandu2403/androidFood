@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorTrang"
     tools:context=".Menu.HoaDonFragment">
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,14 +25,15 @@
                 android:layout_height="48dp"
                 android:layout_weight="1"
                 android:src="@drawable/lg"/>
+
             <EditText
                 android:id="@+id/ed_timkiem"
                 android:layout_width="207dp"
-                android:layout_height="40dp"
+                android:layout_height="48dp"
                 android:layout_weight="1"
-                android:textAlignment="center"
+                android:background="@drawable/box"
                 android:hint="Bạn muốn ăn gì nào?"
-                android:background="@drawable/box"/>
+                android:textAlignment="center" />
             <ImageView
                 android:id="@+id/btn_cart"
                 android:layout_width="40dp"
@@ -41,224 +43,130 @@
         </LinearLayout>
         //header
         // 3 hàng menu
+
         <LinearLayout
-            android:gravity="center"
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
             android:orientation="horizontal">
+
             <LinearLayout
-                android:id="@+id/btn_chaua"
-                android:gravity="center"
-                android:layout_width="100dp"
-                android:layout_weight="1"
-                android:layout_height="100dp"
-                android:orientation="vertical"
+                android:id="@+id/btn_asian"
+                android:layout_width="95dp"
+                android:layout_height="match_parent"
                 android:layout_marginHorizontal="10dp"
-                android:background="@drawable/box">
+                android:layout_weight="1"
+                android:background="@drawable/box"
+                android:gravity="center"
+                android:orientation="vertical">
+
                 <ImageView
-                    android:layout_width="53dp"
-                    android:layout_height="53dp"
-                    android:src="@mipmap/ic_asfood"/>
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:src="@mipmap/ic_asfood" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="#000"
-                    android:textAlignment="center"
-                    android:fontFamily="@font/robotoregular"
                     android:layout_marginTop="10dp"
-                    android:text="Asian food"/>
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Asian food"
+                    android:textAlignment="center"
+                    android:textColor="#000" />
             </LinearLayout>
+
             <LinearLayout
-                android:id="@+id/btn_chauau"
-                android:gravity="center"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:orientation="vertical"
+                android:id="@+id/btn_euro"
+                android:layout_width="95dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/box">
+                android:background="@drawable/box"
+                android:gravity="center"
+                android:orientation="vertical">
+
                 <ImageView
-                    android:layout_width="53dp"
-                    android:layout_height="53dp"
-                    android:src="@mipmap/ic_eupfood"/>
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:src="@mipmap/ic_eupfood" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="#000"
-                    android:textAlignment="center"
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/robotoregular"
-                    android:text="Euro food"/>
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/btn_chaumy"
-                android:gravity="center"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:orientation="vertical"
-                android:layout_weight="1"
-                android:layout_marginHorizontal="10dp"
-                android:background="@drawable/box">
-                <ImageView
-                    android:layout_width="53dp"
-                    android:layout_height="53dp"
-                    android:src="@mipmap/ic_japfood"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000"
+                    android:text="Euro food"
                     android:textAlignment="center"
-                    android:fontFamily="@font/robotoregular"
-                    android:layout_marginTop="10dp"
-                    android:text="Japanese food"/>
+                    android:textColor="#000" />
             </LinearLayout>
         </LinearLayout>
+
         <LinearLayout
-            android:gravity="center"
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
             android:orientation="horizontal">
+
             <LinearLayout
-                android:id="@+id/btn_banhmi"
-                android:gravity="center"
-                android:layout_width="100dp"
-                android:layout_weight="1"
-                android:layout_height="100dp"
-                android:orientation="vertical"
+                android:id="@+id/btn_korean"
+                android:layout_width="92dp"
+                android:layout_height="match_parent"
                 android:layout_marginHorizontal="10dp"
-                android:background="@drawable/box">
-                <ImageView
-                    android:layout_width="53dp"
-                    android:layout_height="53dp"
-                    android:src="@mipmap/ic_kofood"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000"
-                    android:textAlignment="center"
-                    android:fontFamily="@font/robotoregular"
-                    android:layout_marginTop="10dp"
-                    android:text="Korean food"/>
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/btn_mipho"
-                android:gravity="center"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:orientation="vertical"
                 android:layout_weight="1"
-                android:background="@drawable/box">
-                <ImageView
-                    android:layout_width="53dp"
-                    android:layout_height="53dp"
-                    android:src="@drawable/mipho"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000"
-                    android:textAlignment="center"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/robotoregular"
-                    android:text="Mì phở"/>
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/btn_xienque"
+                android:background="@drawable/box"
                 android:gravity="center"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:orientation="vertical"
-                android:layout_weight="1"
-                android:layout_marginHorizontal="10dp"
-                android:background="@drawable/box">
+                android:orientation="vertical">
+
                 <ImageView
-                    android:layout_width="53dp"
-                    android:layout_height="53dp"
-                    android:src="@drawable/xienque"/>
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:src="@mipmap/ic_kofood" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="#000"
-                    android:textAlignment="center"
-                    android:fontFamily="@font/robotoregular"
                     android:layout_marginTop="10dp"
-                    android:text="Xiên que"/>
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Korean food"
+                    android:textAlignment="center"
+                    android:textColor="#000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_japanese"
+                android:layout_width="92dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/box"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:src="@mipmap/ic_japfood" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Japanese food"
+                    android:textAlignment="center"
+                    android:textColor="#000" />
             </LinearLayout>
         </LinearLayout>
-        <LinearLayout
-            android:gravity="center"
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <LinearLayout
-                android:id="@+id/btn_haisan"
-                android:gravity="center"
-                android:layout_width="100dp"
-                android:layout_weight="1"
-                android:layout_height="100dp"
-                android:orientation="vertical"
-                android:layout_marginHorizontal="10dp"
-                android:background="@drawable/box">
-                <ImageView
-                    android:layout_width="53dp"
-                    android:layout_height="53dp"
-                    android:src="@drawable/haisan"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000"
-                    android:textAlignment="center"
-                    android:fontFamily="@font/robotoregular"
-                    android:layout_marginTop="10dp"
-                    android:text="Hải sản"/>
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/btn_dohop"
-                android:gravity="center"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:orientation="vertical"
-                android:layout_weight="1"
-                android:background="@drawable/box">
-                <ImageView
-                    android:layout_width="53dp"
-                    android:layout_height="53dp"
-                    android:src="@drawable/dohop"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000"
-                    android:textAlignment="center"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/robotoregular"
-                    android:text="Đồ hộp"/>
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/btn_thucannhanh"
-                android:gravity="center"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:orientation="vertical"
-                android:layout_weight="1"
-                android:layout_marginHorizontal="10dp"
-                android:background="@drawable/box">
-                <ImageView
-                    android:layout_width="53dp"
-                    android:layout_height="53dp"
-                    android:src="@drawable/thucannhanh"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000"
-                    android:textAlignment="center"
-                    android:fontFamily="@font/robotoregular"
-                    android:layout_marginTop="10dp"
-                    android:text="Thức ăn nhanh"/>
-            </LinearLayout>
-        </LinearLayout>
+
         // 3 hàng menu
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal" />
+
         <ImageView
             android:paddingHorizontal="10dp"
             android:layout_marginTop="30dp"

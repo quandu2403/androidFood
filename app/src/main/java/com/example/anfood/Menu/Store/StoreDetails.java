@@ -1,9 +1,8 @@
 package com.example.anfood.Menu.Store;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+import static com.example.anfood.Menu.Store.Asianliststore.store_rating;
+import static com.example.anfood.Menu.Store.Asianliststore.store_title;
+import static com.example.anfood.Menu.Store.Asianliststore.store_vitri;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,16 +10,16 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.anfood.Adapter.StoreDetailsAdapter;
 import com.example.anfood.Model.Food;
 import com.example.anfood.R;
 
 import java.util.ArrayList;
-
-import static com.example.anfood.Menu.Store.ListStore.store_content;
-import static com.example.anfood.Menu.Store.ListStore.store_rating;
-import static com.example.anfood.Menu.Store.ListStore.store_time;
-import static com.example.anfood.Menu.Store.ListStore.store_title;
 
 public class StoreDetails extends AppCompatActivity {
     Toolbar tb;
@@ -47,7 +46,7 @@ public class StoreDetails extends AppCompatActivity {
         tb.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(v.getContext(),ListStore.class));
+                startActivity(new Intent(v.getContext(), Asianliststore.class));
             }
         });
         //custom toolbar
@@ -57,9 +56,8 @@ public class StoreDetails extends AppCompatActivity {
         tv_rating=findViewById(R.id.tv_store_details_rating);
         //store_title,store_content,store_time,store_rating
         tv_title.setText(store_title);
-        tv_content.setText(store_content);
         tv_rating.setText(store_rating);
-        tv_time.setText(store_time);
+        tv_time.setText(store_vitri);
         // list store food
         rv_list_store_food = findViewById(R.id.rv_list_store_food);
         Food fd = new Food("Phần gà rán gia đình - dành cho \n" +

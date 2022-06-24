@@ -1,14 +1,13 @@
 package com.example.anfood.Menu.Store;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Toast;
 
 import com.example.anfood.Adapter.ListStoreAdapter;
 import com.example.anfood.Function.DatMonAn;
@@ -17,11 +16,11 @@ import com.example.anfood.R;
 
 import java.util.ArrayList;
 
-public class ListStore extends AppCompatActivity {
-Toolbar tb;
-RecyclerView rv_list_store;
-ArrayList<Store> dsStore = new ArrayList<>();
-public static String store_title,store_content,store_time,store_rating;
+public class Euroliststore extends AppCompatActivity {
+    Toolbar tb;
+    RecyclerView rv_list_store;
+    ArrayList<Store> dsStore = new ArrayList<>();
+    public static String store_title,store_vitri,store_rating;
     private View.OnClickListener onItemClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -29,8 +28,7 @@ public static String store_title,store_content,store_time,store_rating;
             int position = viewHolder.getAdapterPosition();
             Store st = dsStore.get(position);
             store_title = st.getTitle();
-            store_content=st.getContent();
-            store_time=st.getTime();
+            store_vitri = st.getVitri();
             store_rating=st.getRating()+"";
             startActivity(new Intent(v.getContext(),StoreDetails.class));
         }
@@ -51,13 +49,15 @@ public static String store_title,store_content,store_time,store_rating;
         });
         //custom toolbar
         rv_list_store = findViewById(R.id.rv_list_store);
-        Store st = new Store("dsa","Gà rán KFC, Nguyễn Văn Cừ",4.5,"6km(45 phút)","Fast Food, thức ăn trưa, Món Châu Á");
-        Store st2 = new Store("dsa","Gà rán KFC, Ba Tháng Hai",3.5,"2km(15 phút)","Fast Food, thức ăn trưa, Món Châu Á");
-        Store st3 = new Store("dsa","Gà rán KFC, Ba Tháng Hai",3.5,"2km(15 phút)","Fast Food, thức ăn trưa, Món Châu Á");
-        Store st4= new Store("dsa","Gà rán KFC, Nguyễn Văn Cừ",4.5,"6km(45 phút)","Fast Food, thức ăn trưa, Món Châu Á");
-        Store st5 = new Store("dsa","Gà rán KFC, Ba Tháng Hai",3.5,"2km(15 phút)","Fast Food, thức ăn trưa, Món Châu Á");
-        Store st6 = new Store("dsa","Gà rán KFC, Ba Tháng Hai",3.5,"2km(15 phút)","Fast Food, thức ăn trưa, Món Châu Á");
-        dsStore.add(st); dsStore.add(st2); dsStore.add(st3); dsStore.add(st4); dsStore.add(st5); dsStore.add(st6);
+        Store[] stores = {
+//                new Store(R.drawable.banhmi,"Gà rán KFC, Nguyễn Văn Cừ",4.5,"6km(45 phút)","Fast Food, thức ăn trưa, Món Châu Á"),
+//                new Store(R.drawable.banhmi,"Gà rán KFC, Nguyễn Văn Cừ",4.5,"6km(45 phút)","Fast Food, thức ăn trưa, Món Châu Á"),
+
+        };
+
+        for(Store store: stores){
+            dsStore.add(store);
+        }
         ListStoreAdapter adapter = new ListStoreAdapter(dsStore);
         rv_list_store.setLayoutManager(new LinearLayoutManager(this));
         rv_list_store.setAdapter(adapter);
