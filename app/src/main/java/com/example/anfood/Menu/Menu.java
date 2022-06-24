@@ -28,7 +28,6 @@ public class Menu extends AppCompatActivity {
         fragment = new HomeFragment();
         loadFragment(fragment);
 
-
     }
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {

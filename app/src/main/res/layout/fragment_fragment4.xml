@@ -82,15 +82,16 @@
                 android:layout_marginLeft="15dp"
                 android:src="@drawable/dot_active"/>
         </LinearLayout>
-        <Button
+
+
+        <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/btn_gotohome"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Bước vào thế giới ẩm thực!"
-            android:textColor="@color/colorTrang"
-            android:background="@drawable/boxbutton"/>
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="submit.json"
+            app:lottie_loop="true" />
     </LinearLayout>
 
 </ScrollView>

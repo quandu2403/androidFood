@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.airbnb.lottie.LottieAnimationView;
+import com.example.anfood.Login.Login;
 import com.example.anfood.Menu.Menu;
 import com.example.anfood.R;
 
@@ -18,7 +20,7 @@ import com.example.anfood.R;
  * A simple {@link Fragment} subclass.
  */
 public class Fragment4 extends Fragment {
-Button btn_gotohome;
+    LottieAnimationView btn_gotohome;
 
     public Fragment4() {
         // Required empty public constructor
@@ -33,8 +35,11 @@ Button btn_gotohome;
     btn_gotohome.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent i = new Intent(v.getContext(), Menu.class);
-            startActivity(i);
+            btn_gotohome.playAnimation();
+            Intent i = new Intent(getActivity(), Login.class);
+            getActivity().startActivity(i);
+            getActivity().finish();
+
         }
     });
         return rootview;

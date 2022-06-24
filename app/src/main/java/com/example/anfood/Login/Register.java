@@ -10,13 +10,14 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.example.anfood.MainActivity;
 import com.example.anfood.Menu.Menu;
 import com.example.anfood.R;
 
 public class Register extends AppCompatActivity {
     EditText username, password, repassword;
-    Button signup;
+    LottieAnimationView btn_signup;
     DBHelper DB;
 
     @Override
@@ -26,7 +27,7 @@ public class Register extends AppCompatActivity {
         final EditText username = findViewById(R.id.username);
 
         password = findViewById(R.id.password);
-        signup = findViewById(R.id.btnOk);
+        btn_signup = findViewById(R.id.btn_signup);
         DB = new DBHelper(this);
 
 //        signup.setOnClickListener(new View.OnClickListener()  {
@@ -67,9 +68,10 @@ public class Register extends AppCompatActivity {
 //            }
 //        });
 
-        signup.setOnClickListener(new View.OnClickListener() {
+        btn_signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                btn_signup.playAnimation();
                 String user = username.getText().toString();
                 String pass = password.getText().toString();
 
@@ -77,9 +79,15 @@ public class Register extends AppCompatActivity {
                     Toast.makeText(Register.this,"Empty data provided.", Toast.LENGTH_LONG).show();
                 }else {
                     Boolean insert = DB.insertData(user, pass);
-                    Intent intent = new Intent(Register.this, Login.class);
-                    startActivity(intent);
-                    finish();
+                    Toast.makeText(Register.this, "Đăng kí thành công", Toast.LENGTH_SHORT).show();
+                    btn_signup.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(Register.this, Login.class);
+                            startActivity(intent);
+                            finish();
+                        }
+                    });
                 }
 
 //                String user = username.getText().toString();
