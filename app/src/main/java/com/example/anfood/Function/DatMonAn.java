@@ -14,15 +14,21 @@ import android.widget.LinearLayout;
 import com.example.anfood.Adapter.GoiY_MontrangmiengAdapter;
 import com.example.anfood.Menu.Cart.CartActivity;
 import com.example.anfood.Menu.Menu;
+import com.example.anfood.Menu.Store.Euroliststore;
+import com.example.anfood.Menu.Store.Japaneseliststore;
+import com.example.anfood.Menu.Store.Koreanliststore;
 import com.example.anfood.Model.MonTrangMieng;
 import com.example.anfood.R;
-import com.example.anfood.Menu.Store.ListStore;
+import com.example.anfood.Menu.Store.Asianliststore;
 
 import java.util.ArrayList;
 
 public class DatMonAn extends AppCompatActivity {
     EditText ed_timkiem;
-    LinearLayout btn_chaua;
+    LinearLayout btn_asian;
+    LinearLayout btn_euro;
+    LinearLayout btn_korean;
+    LinearLayout btn_japanese;
     ImageView btn_backhome,btn_cart;
     ArrayList<MonTrangMieng> dsdesert = new ArrayList<>();
     RecyclerView rv_list_desert;
@@ -43,13 +49,37 @@ public class DatMonAn extends AppCompatActivity {
         rv_list_desert.setAdapter(adapter);
         // list mon trang miệng
         // click vào menu vào danh sách cửa hàng
-        btn_chaua = findViewById(R.id.btn_chaua);
-        btn_chaua.setOnClickListener(new View.OnClickListener() {
+        btn_asian = findViewById(R.id.btn_asian);
+        btn_asian.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(v.getContext(), ListStore.class));
+                startActivity(new Intent(v.getContext(), Asianliststore.class));
             }
         });
+
+        btn_euro = findViewById(R.id.btn_euro);
+        btn_euro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(), Euroliststore.class));
+            }
+        });
+        btn_korean = findViewById(R.id.btn_korean);
+        btn_korean.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(), Koreanliststore.class));
+            }
+        });
+
+        btn_japanese = findViewById(R.id.btn_japanese);
+        btn_japanese.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(), Japaneseliststore.class));
+            }
+        });
+
         // click vào menu vào danh sách cửa hàng
         //click vào back  về home
         btn_backhome.setOnClickListener(new View.OnClickListener() {

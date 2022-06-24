@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,9 +16,9 @@ import com.example.anfood.R;
 import java.util.ArrayList;
 
 public class ListStoreAdapter extends RecyclerView.Adapter<ListStoreAdapter.ViewHolder> {
-public ArrayList<Store> dsstore;
-private View.OnClickListener mOnItemClickListener;
-public ListStoreAdapter(ArrayList<Store> dsstore){this.dsstore=dsstore;}
+    public ArrayList<Store> dsstore;
+    private View.OnClickListener mOnItemClickListener;
+    public ListStoreAdapter(ArrayList<Store> dsstore){this.dsstore=dsstore;}
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -37,12 +38,13 @@ public ListStoreAdapter(ArrayList<Store> dsstore){this.dsstore=dsstore;}
         Store store = dsstore.get(position);
         TextView tv_title = holder.tv_title;
         TextView tv_rating = holder.tv_rating;
-        TextView tv_time = holder.tv_time;
-        TextView tv_content = holder.tv_content;
+        TextView tv_vitri = holder.tv_vitri;
+        ImageView tv_img = holder.tv_img;
+
         tv_title.setText(store.getTitle());
         tv_rating.setText(store.getRating()+"");
-        tv_time.setText(store.getTime());
-        tv_content.setText(store.getContent());
+        tv_vitri.setText(store.getVitri());
+        tv_img.setImageResource(store.getImg());
     }
     public void setOnItemClickListener(View.OnClickListener itemClickListener) {
         mOnItemClickListener = itemClickListener;
@@ -53,16 +55,16 @@ public ListStoreAdapter(ArrayList<Store> dsstore){this.dsstore=dsstore;}
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-public TextView tv_title;
-public TextView tv_rating;
-public TextView tv_time;
-public TextView tv_content;
+        public TextView tv_title;
+        public TextView tv_rating;
+        public TextView tv_vitri;
+        public ImageView tv_img ;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             tv_title = itemView.findViewById(R.id.tv_store_title);
             tv_rating=itemView.findViewById(R.id.tv_store_rating);
-            tv_content=itemView.findViewById(R.id.tv_store_content);
-            tv_time= itemView.findViewById(R.id.tv_store_time);
+            tv_vitri= itemView.findViewById(R.id.tv_store_vitri);
+            tv_img = itemView.findViewById(R.id.tv_store_img);
             itemView.setTag(this);
             itemView.setOnClickListener(mOnItemClickListener);
         }
