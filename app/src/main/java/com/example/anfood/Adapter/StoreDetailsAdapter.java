@@ -9,7 +9,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.anfood.Menu.Store.StoreDetails;
 import com.example.anfood.Model.Food;
 import com.example.anfood.R;
 

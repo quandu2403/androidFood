@@ -26,7 +26,10 @@
         <activity android:name=".Menu.HoaDon.HoaDonChiTiet" />
         <activity android:name=".Menu.HoaDon.ListHoaDon" />
         <activity android:name=".Function.DatMonAn" />
-        <activity android:name=".Menu.Store.ListStore" />
+        <activity android:name=".Menu.Store.Asianliststore" />
+        <activity android:name=".Menu.Store.Euroliststore" />
+        <activity android:name=".Menu.Store.Koreanliststore" />
+        <activity android:name=".Menu.Store.Japaneseliststore" />
         <activity android:name=".Ticket.VoucherDetails" />
         <activity android:name=".Ticket.TicketList" />
         <activity android:name=".Menu.Menu" />

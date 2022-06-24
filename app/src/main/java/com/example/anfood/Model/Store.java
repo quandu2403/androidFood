@@ -1,26 +1,17 @@
 package com.example.anfood.Model;
 
 public class Store {
-    private String img;
+    private int img;
     private String title;
     private double rating;
-    private String time;
-    private String content;
+    private String vitri;
 
 
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
-
-    public String getImg() {
+    public int getImg() {
         return img;
     }
 
-    public void setImg(String img) {
+    public void setImg(int img) {
         this.img = img;
     }
 
@@ -40,19 +31,18 @@ public class Store {
         this.rating = rating;
     }
 
-    public String getTime() {
-        return time;
+    public String getVitri() {
+        return vitri;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public void setVitri(String vitri) {
+        this.vitri = vitri;
     }
 
-    public Store(String img, String title, double rating, String time, String content) {
+    public Store(int img, String title, double rating, String vitri){
         this.img = img;
         this.title = title;
         this.rating = rating;
-        this.time = time;
-        this.content = content;
+        this.vitri = vitri;
     }
 }
