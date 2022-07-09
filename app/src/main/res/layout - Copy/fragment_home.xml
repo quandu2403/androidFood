@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingVertical="20dp"
+    android:background="@color/colorTrang"
+    tools:context=".Home">
+ /*header<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        >
+        <ImageView
+            android:layout_width="82dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginTop="11dp"
+            android:src="@drawable/lg"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:fontFamily="@font/robotoregular"
+        android:gravity="center"
+        android:text="Khám phá ngay"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="19dp" />
+
+    </LinearLayout>
+      <LinearLayout
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/btn_datmonan"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/box">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dathang"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textAlignment="center"
+                android:fontFamily="@font/robotoregular"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+   /*card khuyen mai <LinearLayout
+        android:gravity="center"
+        android:layout_marginTop="17dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/layout_main"
+            android:layout_width="338dp"
+            android:layout_height="158dp"
+            android:background="@drawable/jfood"
+            />
+        <RelativeLayout
+            android:layout_marginTop="17dp"
+            android:id="@+id/layout_main2"
+            android:layout_width="338dp"
+            android:layout_height="158dp"
+            android:background="@drawable/sfood"
+            />
+    </LinearLayout>
+
+</LinearLayout>
+</ScrollView>
