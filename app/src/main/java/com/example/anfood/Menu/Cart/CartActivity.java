@@ -11,7 +11,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.anfood.Adapter.ListCartAdapter;
 import com.example.anfood.Function.DatMonAn;
 import com.example.anfood.Model.Cart;
 import com.example.anfood.R;
@@ -32,9 +31,7 @@ public ArrayList<Cart> dsCartActivity = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cart);
-        //custom toolbar
-        tb=findViewById(R.id.tb_cart);
+
         tb.setNavigationIcon(R.drawable.ic_back);
         tb.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,7 +40,7 @@ public ArrayList<Cart> dsCartActivity = new ArrayList<>();
             }
         });
         //List cart
-        rv_list_cart=findViewById(R.id.rv_cart_list_food);
+
         Cart cart = new Cart("acb",287.987,"Combo beef steak - Size Vừa - \n" +
                 "Đế giày",1);
         Cart cart2 = new Cart("acb",287.987,"Combo beef steak - Size Vừa - \n" +
@@ -53,18 +50,13 @@ public ArrayList<Cart> dsCartActivity = new ArrayList<>();
         Cart cart4 = new Cart("acb",287.987,"Combo beef steak - Size Vừa - \n" +
                 "Đế giày",1);
         dsCartActivity.add(cart); dsCartActivity.add(cart2); dsCartActivity.add(cart3); dsCartActivity.add(cart4);
-        ListCartAdapter adapter = new ListCartAdapter(dsCartActivity);
+
         rv_list_cart.setLayoutManager(new LinearLayoutManager(this));
-        rv_list_cart.setAdapter(adapter);
-        adapter.setOnItemClickListener(onItemClickListener);
+
+
         //List cart
         // chuyển sang màn xác nhận đơn
-        btn_cart_xacnhan = findViewById(R.id.btn_cart_xacnnhan);
-        btn_cart_xacnhan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(v.getContext(),ConfirmCart.class));
-            }
-        });
+
+     
     }
 }

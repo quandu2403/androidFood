@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.anfood.Menu.HoaDon.ListHoaDon;
+
 import com.example.anfood.R;
 
 /**
@@ -31,7 +31,7 @@ TextView tv_lichsuhoadon;
      tv_lichsuhoadon.setOnClickListener(new View.OnClickListener() {
          @Override
          public void onClick(View v) {
-             startActivity(new Intent(v.getContext(), ListHoaDon.class));
+//             startActivity(new Intent(v.getContext(), ListHoaDon.class));
          }
      });
         return root;

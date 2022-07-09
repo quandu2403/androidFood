@@ -4,7 +4,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorTrang"
     android:layout_width="match_parent">
+
 <LinearLayout
     android:orientation="vertical"
     android:layout_width="match_parent"

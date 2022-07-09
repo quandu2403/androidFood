@@ -5,6 +5,7 @@ public class Store {
     private String title;
     private double rating;
     private String vitri;
+    private String country;
 
 
     public int getImg() {
@@ -39,10 +40,20 @@ public class Store {
         this.vitri = vitri;
     }
 
-    public Store(int img, String title, double rating, String vitri){
-        this.img = img;
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public Store(String country, String title, String vitri, double rating, int img){
+        this.country = country;
+        this.vitri = vitri;
         this.title = title;
         this.rating = rating;
-        this.vitri = vitri;
+        this.img = img;
     }
+
 }

@@ -47,7 +47,7 @@ public class Login extends AppCompatActivity {
                         startActivity(intent);
                         finish();
                     } else {
-                        Toast.makeText(Login.this, "Không hợp lệ 123", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Login.this, "Không hợp lệ", Toast.LENGTH_SHORT).show();
                     }
                 }
             }

@@ -89,12 +89,6 @@ public class DatMonAn extends AppCompatActivity {
             }
         });
         // chuyển sang cart
-        btn_cart = findViewById(R.id.btn_cart);
-        btn_cart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(v.getContext(), CartActivity.class));
-            }
-        });
+
     }
 }

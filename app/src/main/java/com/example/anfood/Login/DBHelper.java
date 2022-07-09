@@ -9,8 +9,13 @@ import androidx.annotation.Nullable;
 
 public class DBHelper extends SQLiteOpenHelper {
     public static final String DBNAME = "Login.db";
+    public static final String DB2_NAME = "DB_Test.db";
+    public static String DBPath = "";
+    private Context mContext;
     public DBHelper(Context context) {
         super(context, "Login.db", null, 1);
+        this.mContext = context;
+        this.DBPath = "/data/data/" + context.getPackageName() + "/" + "databases/";
     }
 
     @Override

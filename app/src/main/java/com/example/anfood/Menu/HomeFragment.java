@@ -19,7 +19,7 @@ import com.example.anfood.Adapter.HomeFoodAdapter;
 import com.example.anfood.Function.DatMonAn;
 import com.example.anfood.Model.FoodHome;
 import com.example.anfood.R;
-import com.example.anfood.Ticket.TicketList;
+
 
 import java.util.ArrayList;
 
@@ -37,25 +37,25 @@ LinearLayout btn_datmonan;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
             final ViewGroup root = (ViewGroup)inflater.inflate(R.layout.fragment_home, container, false);
-            rvlist_food= root.findViewById(R.id.rv_listfood);
-            img_ticket= root.findViewById(R.id.img_ticket);
-            FoodHome fd = new FoodHome("abc","Món ko");
-            FoodHome fd2 = new FoodHome("avc","Món Châu Âu");
-            FoodHome fd3 = new FoodHome("avc","Món Châu Mỹ");
-            listfood = new ArrayList<>();
-            listfood.add(fd);   listfood.add(fd2); listfood.add(fd3);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(root.getContext(), LinearLayoutManager.HORIZONTAL, false);
-        rvlist_food.setLayoutManager(layoutManager);
-        HomeFoodAdapter adapter = new HomeFoodAdapter(listfood);
-        rvlist_food.setAdapter(adapter);
-        // recycleview list food
-        img_ticket.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(root.getContext(), TicketList.class);
-                startActivity(i);
-            }
-        });
+//            rvlist_food= root.findViewById(R.id.rv_listfood);
+//            img_ticket= root.findViewById(R.id.img_ticket);
+//            FoodHome fd = new FoodHome("abc","Món ko");
+//            FoodHome fd2 = new FoodHome("avc","Món Châu Âu");
+//            FoodHome fd3 = new FoodHome("avc","Món Châu Mỹ");
+//            listfood = new ArrayList<>();
+//            listfood.add(fd);   listfood.add(fd2); listfood.add(fd3);
+//        LinearLayoutManager layoutManager = new LinearLayoutManager(root.getContext(), LinearLayoutManager.HORIZONTAL, false);
+//        rvlist_food.setLayoutManager(layoutManager);
+//        HomeFoodAdapter adapter = new HomeFoodAdapter(listfood);
+//        rvlist_food.setAdapter(adapter);
+//        // recycleview list food
+//        img_ticket.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i = new Intent(root.getContext(), TicketList.class);
+//                startActivity(i);
+//            }
+//        });
         //click chuyển sang ticket list
         //Nút Đặt món ăn
         btn_datmonan= root.findViewById(R.id.btn_datmonan);

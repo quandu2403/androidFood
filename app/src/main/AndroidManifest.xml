@@ -20,7 +20,6 @@
         </activity>
         <activity android:name=".Menu.Personal.UpdateInfo"></activity>
         <activity android:name=".Menu.Messenger.MessRoom" />
-        <activity android:name=".Menu.Cart.ConfirmCart" />
         <activity android:name=".Menu.Cart.CartActivity" />
         <activity android:name=".Menu.Store.StoreDetails" />
         <activity android:name=".Menu.HoaDon.HoaDonChiTiet" />

@@ -8,7 +8,9 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Toast;
 
+import com.example.anfood.Login.Login;
 import com.example.anfood.Menu.Messenger.TinNhanFragment;
 import com.example.anfood.Menu.Personal.CaNhanFragment;
 import com.example.anfood.R;
@@ -45,8 +47,7 @@ public class Menu extends AppCompatActivity {
                     loadFragment(fragment);
                     return true;
                 case R.id.icon_nhantin:
-                    fragment = new TinNhanFragment();
-                    loadFragment(fragment);
+                    Toast.makeText(Menu.this, "Tính năng đang bảo trì!", Toast.LENGTH_SHORT).show();
                     return true;
                 case R.id.icon_canhan:
                     fragment = new CaNhanFragment();

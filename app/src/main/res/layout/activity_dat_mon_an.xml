@@ -34,12 +34,6 @@
                 android:background="@drawable/box"
                 android:hint="Bạn muốn ăn gì nào?"
                 android:textAlignment="center" />
-            <ImageView
-                android:id="@+id/btn_cart"
-                android:layout_width="40dp"
-                android:layout_weight="1"
-                android:layout_height="40dp"
-                android:src="@drawable/cart"/>
         </LinearLayout>
         //header
         // 3 hàng menu
@@ -71,7 +65,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/robotoregular"
-                    android:text="Asian food"
+                    android:text="VietNamese food"
                     android:textAlignment="center"
                     android:textColor="#000" />
             </LinearLayout>
@@ -95,7 +89,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/robotoregular"
-                    android:text="Euro food"
+                    android:text="Western food"
                     android:textAlignment="center"
                     android:textColor="#000" />
             </LinearLayout>

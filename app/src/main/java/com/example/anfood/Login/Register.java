@@ -28,45 +28,8 @@ public class Register extends AppCompatActivity {
 
         password = findViewById(R.id.password);
         btn_signup = findViewById(R.id.btn_signup);
+        repassword = findViewById(R.id.repassword);
         DB = new DBHelper(this);
-
-//        signup.setOnClickListener(new View.OnClickListener()  {
-//            @Override
-//            public void onClick(View view) {
-//                // stay
-//
-//                String user = username.getText().toString();
-//                String pass = password.getText().toString();
-//                String repass = repassword.getText().toString();
-//
-//
-//
-//                if(user.equals("") || pass.equals("") || repass.equals("")) {
-//
-//                    Toast.makeText(Register.this, "Không hợp lệ", Toast.LENGTH_SHORT).show();
-//                }
-//                else {
-//                    if (pass.equals(repass)) {
-//                        Boolean checkuser = DB.checkusername(user);
-//                        if(checkuser == false) {
-//                            Boolean insert = DB.insertData(user, pass);
-//
-//                            if(insert == true) {
-//                                Intent intent = new Intent(getApplicationContext(), Login.class);
-//                                Toast.makeText(Register.this, "Đăng kí thành công", Toast.LENGTH_SHORT).show();
-//                                startActivity(intent);
-//                            } else {
-//                                Toast.makeText(Register.this,"Đăng Ký thất bại", Toast.LENGTH_SHORT).show();
-//                            }
-//                        } else {
-//                            Toast.makeText(Register.this,"tài khoản đã đăng ký", Toast.LENGTH_SHORT).show();
-//                        }
-//                    } else {
-//                        Toast.makeText(Register.this,"Mật khẩu không hơp", Toast.LENGTH_SHORT).show();
-//                    }
-//                }
-//            }
-//        });
 
         btn_signup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,53 +37,38 @@ public class Register extends AppCompatActivity {
                 btn_signup.playAnimation();
                 String user = username.getText().toString();
                 String pass = password.getText().toString();
+                String repass = repassword.getText().toString();
 
                 if(TextUtils.isEmpty(user) || TextUtils.isEmpty(pass)){
                     Toast.makeText(Register.this,"Empty data provided.", Toast.LENGTH_LONG).show();
                 }else {
-                    Boolean insert = DB.insertData(user, pass);
-                    Toast.makeText(Register.this, "Đăng kí thành công", Toast.LENGTH_SHORT).show();
-                    btn_signup.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
+                    if(TextUtils.equals(pass, repass)){
+                        Boolean checkuser = DB.checkusername(user);
+                        if(!checkuser) {
+                            Boolean insert = DB.insertData(user, pass);
+                            if(insert) {
+                                btn_signup.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        Intent intent = new Intent(Register.this, Login.class);
+                                        Toast.makeText(Register.this,"Đăng Ký thành công", Toast.LENGTH_SHORT).show();
+                                        startActivity(intent);
+                                        finish();
+                                    }
+                                });
+                            } else {
+                                Toast.makeText(Register.this,"Đăng Ký thất bại", Toast.LENGTH_SHORT).show();
+                            }
+                        } else {
+                            Toast.makeText(Register.this,"tài khoản đã đăng ký", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(Register.this, Login.class);
                             startActivity(intent);
                             finish();
                         }
-                    });
+                    } else {
+                        Toast.makeText(Register.this,"Mật khẩu không trùng nhau", Toast.LENGTH_SHORT).show();
+                    }
                 }
-
-//                String user = username.getText().toString();
-//                String pass = password.getText().toString();
-//                String repass = repassword.getText().toString();
-//
-//
-//                if(TextUtils.isEmpty(user) || TextUtils.isEmpty(pass)){
-//                    Toast.makeText(Register.this,"Empty data provided.", Toast.LENGTH_LONG).show();
-//                }else {
-////                    Boolean insert = DB.insertData(user, pass);
-////                    Intent intent = new Intent(Register.this, Login.class);
-////                    startActivity(intent);
-////                    finish();
-//                    if (pass === repass) {
-//                        Boolean checkuser = DB.checkusername(user);
-//                        if(checkuser == false) {
-//                            Boolean insert = DB.insertData(user, pass);
-//                            if(insert == true) {
-//                                Intent intent = new Intent(getApplicationContext(), Login.class);
-//                                Toast.makeText(Register.this, "Đăng kí thành công", Toast.LENGTH_SHORT).show();
-//                                startActivity(intent);
-//                                finish();
-//                            } else {
-//                                Toast.makeText(Register.this,"Đăng Ký thất bại", Toast.LENGTH_SHORT).show();
-//                            }
-//                        } else {
-//                            Toast.makeText(Register.this,"tài khoản đã đăng ký", Toast.LENGTH_SHORT).show();
-//                        }
-//                    } else {
-//                        Toast.makeText(Register.this,"Mật khẩu không hơp", Toast.LENGTH_SHORT).show();
-//                    }
-//                }
             }
         });
     }
